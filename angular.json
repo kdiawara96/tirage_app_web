@@ -23,13 +23,21 @@
               "src/assets"
             ],
             "styles": [
+<<<<<<< HEAD
               "src/custom-theme.scss",
+=======
+>>>>>>> a7a8750 (create a compenent la liste de tirage, ...)
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
+<<<<<<< HEAD
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "node_modules/jquery/dist/jquery.min.js"
+=======
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js" 
+>>>>>>> a7a8750 (create a compenent la liste de tirage, ...)
               
             ]
           },

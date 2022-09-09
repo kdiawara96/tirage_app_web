@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ng-tirage-app';
   //création de la branch
+  //myimage:string = "src/assets/img/photo.png";
 }
