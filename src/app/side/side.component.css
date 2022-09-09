@@ -1,0 +1,44 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.menuSide{
+  margin-left: 5%;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+#icons{
+  margin-right: 5px;
+  font-size: 25px;
+}
+.img{
+  margin-bottom: 4px;
+}
+
+input[type=text] {
+  padding: 6px;
+  border-radius: 5px;
+  margin-top: 4px;
+  /* margin-right: 16px; */
+  margin-bottom: 10px;
+  margin-left: 11%;
+  font-size: 17px;
+}
+
+.mat-drawer.mat-drawer-side{
+  width: 20%;
+}
