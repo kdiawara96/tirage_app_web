@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { LaListeDeTirageEtNombreTireComponent } from './la-liste-de-tirage-et-nombre-tire/la-liste-de-tirage-et-nombre-tire.component';
 import { LaListeDeTirageComponent } from './la-liste-de-tirage/la-liste-de-tirage.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { PersonCardComponent } from './person-card/person-card.component';
 import { TirageComponent } from './tirage/tirage.component';
 import { TotalListeComponent } from './total-liste/total-liste.component';
 
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path:"liste_tirage_nombre_tirer",component:LaListeDeTirageEtNombreTireComponent},
   {path:"tirage",component:TirageComponent},
   {path:"home", component: HomeComponent},
+  {path:"person", component: PersonCardComponent},
   {path:"", component: HomeComponent}
 ];
 
