@@ -1,17 +1,17 @@
-<mat-sidenav-container class="sidenav-container" >
+<mat-sidenav-container class="sidenav-container"  >
 
 
-  <mat-sidenav #drawer class="sidenav bg-dark" fixedInViewport
+  <mat-sidenav #drawer class="sidenav " style="background-color: #002a3f;" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+      [opened]="(isHandset$ | async) === false" >
     <mat-toolbar>
       
       <a class="navbar-brand img" href="#">
       <img src="assets/img/logo.png" alt="..." width="180" height="50">
     </a>
   
-  </mat-toolbar>
+   </mat-toolbar>
   
     <mat-nav-list>
       <input type="text" placeholder="Recherche..">
@@ -22,7 +22,7 @@
     
            </mat-nav-list>
 
-  </mat-sidenav>
+     </mat-sidenav>
 
   <mat-sidenav-content>
     

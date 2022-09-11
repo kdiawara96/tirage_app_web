@@ -26,6 +26,7 @@
   font-size: 25px;
 }
 .img{
+  margin-top: 2px;
   margin-bottom: 4px;
 }
 
@@ -35,10 +36,13 @@ input[type=text] {
   margin-top: 4px;
   /* margin-right: 16px; */
   margin-bottom: 10px;
-  margin-left: 11%;
+  margin-left: 5%;
   font-size: 17px;
 }
-
+/* 
 .mat-drawer.mat-drawer-side{
+  width: 20%;
+} */
+.sidenav{
   width: 20%;
 }

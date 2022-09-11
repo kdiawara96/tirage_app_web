@@ -7,6 +7,14 @@ import { TotalListeComponent } from './total-liste/total-liste.component';
 import { LaListeDeTirageComponent } from './la-liste-de-tirage/la-liste-de-tirage.component';
 import { LaListeDeTirageEtNombreTireComponent } from './la-liste-de-tirage-et-nombre-tire/la-liste-de-tirage-et-nombre-tire.component';
 import { TirageComponent } from './tirage/tirage.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { HomeComponent } from './home/home.component';
+import { SideComponent } from './side/side.component';
+import {  MatSidenavModule } from '@angular/material/sidenav';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule, MatNavList } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -14,11 +22,23 @@ import { TirageComponent } from './tirage/tirage.component';
     TotalListeComponent,
     LaListeDeTirageComponent,
     LaListeDeTirageEtNombreTireComponent,
-    TirageComponent
+    TirageComponent,
+    NavBarComponent,
+    HomeComponent,
+    SideComponent,
+    SideComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatListModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
