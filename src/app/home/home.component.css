@@ -12,7 +12,59 @@
   /* carde titre */
 
 
-  
+  /* button dirigeant vers la page de tirage */
+  @import url("https://fonts.googleapis.com/css?family=Montserrat:600&display=swap");
+
+span {
+  position: relative;
+  left: 40%;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+
+}
+span a {
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform 0.25s;
+  font-family: "Montserrat", sans-serif;
+}
+span a:before,
+span a:after {
+  position: absolute;
+  content: "FAIRE UN TIRAGE";
+  height: 55px;
+  width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #002a3f;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+span a:before {
+  color: #fff;
+  background: #002a3f;
+  transform: rotateY(0deg) translateZ(25px);
+}
+span a:after {
+  color: #000;
+  transform: rotateX(90deg) translateZ(25px);
+}
+span a:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+/* fin button dirigeant sur la page  */
+
+
+
 img{
   width: 65%;
   margin: 0 auto;
