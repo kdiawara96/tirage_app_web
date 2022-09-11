@@ -1,8 +1,236 @@
-.grand{
+
+.container{
+    display: grid;
+    grid-template-columns:auto auto;
+}
+ 
+.champ{
+    display: grid;
+    grid-template-columns:auto auto;
+}
+
+.form_1{
+    width: 100%;
+}
+
+.form_2{
+    width: 100%;
+    margin-left: 20%;
+    /* margin-top: 25%; */
+  
+}
+
+
+
+.faire_tirage{
+
+    font-size: 25px;
+    font-weight: 800;
+    /* ça nous à permet de centrer le bloc */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+  }
+  form input[type="text"]{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+  }
+
+form input[type="submit"]
+{
+    border: black 1px solid;
+    background-color: black;
+    color: white;
+    height: 35px;
+    width: 15%;
+    font-size: 18px;
+    border-radius: 3px;
+   -moz-border-radius: 5px;
+}
+ 
+form input[type="submit"]:hover
+{
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+}
+
+
+.success{
+
+    display: grid;
+    grid-template-columns:auto auto;
+    position: absolute; /* postulat de départ */
+    top: 94%; left: 25%; /* à 50%/50% du parent référent */
+    transform: translate(-0%, -50%); /* décalage de 50% de sa propre taille */
+    border: 1px solid green;
+    padding: 10px;
+    padding-top: 20px;
+    width: 20%;
+    border-radius: 5px;
+}
+
+.erreur{
+    display: grid;
+    grid-template-columns:auto auto;
+    position: absolute; /* postulat de départ */
+    top: 94%; left: 25%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+    border: 1px solid red;
+    padding: 10px;
+    padding-top: 20px;
+    width: 20%;
+    border-radius: 5px;
+  }
+
+
+
+.erreur p{
+    margin-left: 10px;
+}
+
+
+
+.dashTirage{
+    font-size: 25px;
+    font-weight: 800;
+    /* ça nous à permet de centrer le bloc */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    
+}
+
+input[type="file"]{
+    display: none;
+  }
+
+  input[type="text"]{
+    border: 1px solid black;
+    border-radius: 2px;
+    height: 35px;
+    width: 25%;
+    background: #D9D9D9;
+   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  
+  input::content
+{
+    border: none;
+}
+
+  ::placeholder{
+    text-align: center;
+    color: #6b6565;
+  }
+
+
+
+
+
+  .div_tire{
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  label{
+    color: white;
+    height: 250px;
+    width: 90%;
+    background: #D9D9D9;
+  
+    position: relative;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  
+    margin-top: 2%;
+    border-radius: 15px;
+    border: 1px solid black;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  img{
+ margin-left: 4%;
+ margin-top: 2%;
+  }
+
+  
+  .small-div{
+    border: 1px dashed black;
+    /* padding: 4% 16% 4% 16%; */
+    display: table;
+    border-radius: 15px;
+  
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  
+  
+    height: 98%;
+    width: 98%;
+   
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .divSelect{
+    text-align: center; 
+    color: black;
+    font-weight: 500;
+  }
+  .selectionner{
+    font-size: 20px;
+    
+  }
+  
+  .selectionner:hover{
+    color: blue;
+    text-decoration: underline;
+  }
+  .ou{
+    
+    font-size: 10px;
+  }
+
+
+
+
+
+/* It is the work of yousking */
+
+
+/* .grand{
     box-sizing: border-box;
     position: absolute;
 width: 40%;
 height: 45%;
+border: 1px solid black;
 left: 30%;
 top: 8%;
 margin-left: auto;
@@ -61,4 +289,4 @@ img{
      .import p{
         color:#FFFFFF;
         padding-top: 5px;
-     }
+     } */
