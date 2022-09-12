@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LaListeDeTirageComponent implements OnInit {
 
-  constructor() { }
+  public listes: any =undefined;
+
+  constructor(private httpClient:HttpClient) { 
+
+  }
 
   ngOnInit(): void {
+    this.httpClient.get("http://localhost:8080/tirages/AfficherTirage")
+    .subscribe(data=>{
+      console.log(data)
+      this.listes=data
+    })
+
   }
 
 }
