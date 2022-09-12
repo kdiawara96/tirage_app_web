@@ -4,3 +4,7 @@ h2{
 i.fa-trash{
     color: red;
 }
+thead{
+    background-color: #002A3F; 
+    color: #FFFF;
+}
