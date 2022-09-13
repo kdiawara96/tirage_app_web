@@ -2,104 +2,109 @@
 
 <div class="container">
 
+<div class="row">
 
-    <div>
+
+    <div class=" col-sm-12 col-md-12 col-lg-6 div1" >
+
+
+
+
+
         <form class="form_1">
 
-                <span class="dashTirage text-uppercase">Televerser un fichier</span>
+            <span class="dashTirage text-uppercase">Televerser un fichier</span>
 
-                <input type="file" id="file" accept="">
-                <label for="file">
-                <div class="small-div">
-                    <div> 
-                    <img src="../../assets/image/photo.png" height=90%, width=90%> 
-                        <!-- <i class="fa fa-file-excel-o" aria-hidden="true"></i>
-                        choose a file -->
-                        <div class="divSelect">
-                        <p  class="selectionner">Selectionner le fichier à Importer</p>
-                        <p class="ou"> Ou gliser deposer</p>
-                        </div>
-                    </div>  
-                </div>
-                </label>
-        
-                <div class="div_tire">
+            <input type="file" id="file" accept="">
+            <label for="file">
+            <div class="small-div">
+                <div> 
+                <img src="../../assets/image/photo.png" height=90%, width=90%> 
+                    <!-- <i class="fa fa-file-excel-o" aria-hidden="true"></i>
+                    choose a file -->
+                    <div class="divSelect">
+                    <p  class="selectionner">Selectionner le fichier à Importer</p>
+                    <p class="ou"> Ou gliser deposer</p>
+                    </div>
+                </div>  
+            </div>
+            </label>
+    
+
+            <div class="blocInputSubmit">
+                <div class="div_titre">
                     <input type="text"  placeholder="Donner un titre"> 
                 </div>
-
-                <div class="div_tire">
+    
+                <div class="div_submit">
                     <input type="submit"  value="Inserer">
                 </div>
+    
+            </div>
+            
+           
 
+            <div class="success">
+                <i class="fa fa-check-circle" style="font-size: 35px; color: green;" aria-hidden="true"></i>
+                <p>Les données sont bien inseré !</p>
+             </div>
 
-                <div class="success">
-                    <i class="fa fa-check-circle" style="font-size: 35px; color: green;" aria-hidden="true"></i>
-                    <p>Les données sont bien inseré !</p>
-                 </div>
+            <div class="erreur">
+                    <i class="fa fa-exclamation-circle" style="font-size: 35px; color: Red;" aria-hidden="true"></i>
+                    <p>Les données ne sont inseré !</p>    
+            </div>
 
-                <div class="erreur">
-                        <i class="fa fa-exclamation-circle" style="font-size: 35px; color: Red;" aria-hidden="true"></i>
-                        <p>Les données ne sont inseré !</p>    
-                </div>
-
-         </form>
-
-              
-      
-
+     </form>
 
     </div>
+    
 
 
 
-    <div>
-
-        <form class="form_2">
+    <div class="col-sm-12 col-md-12 col-lg-6" id="div2">
+    <form class="form_2">
             <span class="faire_tirage text-uppercase" style="margin-right: 15%; ">Faire un tirage</span>
 
            
                 <div>
                     <img src="../../assets/image/tirage.png" width=80% height=4% alt="" style="margin-left: 10%;margin-bottom: 5%;margin-top: 2%;">
                 </div>
-           <div class="champ">
+           
+              
+
+                    <div class="champ">
 
 
-            <!--  a modifier select box-->
-                <div class="titre">
-                    <!-- <input type="select" placeholder="--Seleectionner un fichier--"> -->
-                    <select name="liste_tirage">
-                        <option value="select">--Seleectionner un fichier--</option>
-                        <option value="liste">Liste 2 orange digital kalanso</option>
-                        <option value="liste">Liste 2 orange digital kalanso</option>
-                        <option value="liste">Liste 2 orange digital kalanso</option>
-                        <option value="liste">Liste 2 orange digital kalanso</option>
-                        <option value="liste">Liste 2 orange digital kalanso</option>
-                        <option value="liste">Liste 2 orange digital kalanso</option>
-                        <option value="liste">Liste 2 orange digital kalanso</option>
-                        <option value="liste">Liste 2 orange digital kalanso</option>
-                        <option value="liste">Liste 2 orange digital kalanso</option>
-                        <option value="liste">Liste 2 orange digital kalanso</option>
+                        <!--  a modifier select box-->
+                        <div class="titre">
+
+                                <!-- <input type="select" placeholder="--Seleectionner un fichier--"> -->
+                             <select name="liste_tirage">
+                                <option value="select">--Seleectionner un fichier--</option>
+                                <option value="liste">Liste 2 orange digital kalanso</option>
+                                <option value="liste">Liste 2 orange digital kalanso</option>
+                                <option value="liste">Liste 2 orange digital kalanso</option>
+                                <option value="liste">Liste 2 orange digital kalanso</option>
+                                <option value="liste">Liste 2 orange digital kalanso</option>
+                                <option value="liste">Liste 2 orange digital kalanso</option>
+                                <option value="liste">Liste 2 orange digital kalanso</option>
+                                <option value="liste">Liste 2 orange digital kalanso</option>
+                                <option value="liste">Liste 2 orange digital kalanso</option>
+                                <option value="liste">Liste 2 orange digital kalanso</option>
+                                
+                            </select>
+                   
+                         </div>
+
+                                    <!-- A modifier  -->
+
+                           <div class="nombre">
+                              <input type="text"  placeholder="Nombre à tirer"> 
+                            </div>
                         
-                     </select>
-                    <!-- <option value="liste">Liste 2 orange digital kalanso</option> 
-                    <option value="liste">Liste 2 orange digital kalanso</option> 
-                    <option value="liste">Liste 2 orange digital kalanso</option> 
-                    <option value="liste">Liste 2 orange digital kalanso</option> 
-                    <option value="liste">Liste 2 orange digital kalanso</option> 
-                    <option value="liste">Liste 2 orange digital kalanso</option> 
-                    <option value="liste">Liste 2 orange digital kalanso</option> 
-                    <option value="liste">Liste 2 orange digital kalanso</option> 
-                    <option value="liste">Liste 2 orange digital kalanso</option>  -->
                 </div>
-
-                <!-- A modifier  -->
-
-                <div class="nombre">
-                    <input type="text"  placeholder="Nombre à tirer"> 
-                </div>
-            
                 
-            </div>
+          
 
             <div class="libelle_tirage">
                 <input type="text"  placeholder="Libelle tirage" style="margin-top: 4%; width: 85%; "> 
@@ -111,10 +116,12 @@
                 </div>
           
              
-        </form>
-
+            </form>
 
     </div>
+
+
+</div>
 
 
 </div>
