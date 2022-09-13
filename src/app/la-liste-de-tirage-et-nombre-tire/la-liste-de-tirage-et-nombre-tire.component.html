@@ -1,8 +1,8 @@
 <div class="container">
-    <h2 class="text-center text-uppercase entete">Liste de tirage et nombre tiré</h2>
+    <h2 class="text-center text-uppercase">Liste de tirage et nombre tiré</h2>
     <!-- <p>The .thead-dark class adds a black background to table headers, and the .thead-light class adds a grey background to table headers:</p> -->
-    <table class="table">
-      <thead class="thead" style="background-color: #002a3f; color: white;">
+    <table class="table"  *ngIf="detaillListe">
+      <thead class="thead entete" >
         <tr>
           <th>Numero</th>
           <th>Libéllés Liste</th>
@@ -12,11 +12,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Liste 2 orange digital kalanso </td>
-          <td>2022 - 07 -23</td>
-          <a href=""><td>27</td></a>
+        <tr *ngFor="let l of detaillListe; let id = index">
+          <td>{{id+1}}</td>
+          <td>{{l[0]}}</td>
+          <td>{{l[1]}}</td>
+          <a><td>{{l[2]}}</td></a>
           <td> <a href="liste_tirage"> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right:15px ;"></i></a>
              
               <a href=""><i class="fa fa-pencil-square-o" aria-hidden="true" style="margin-right:15px ;"></i></a>
@@ -26,98 +26,7 @@
   
            </td>
         </tr>
-       
-        <tr>
-          <td>1</td>
-          <td>Liste 2 orange digital kalanso </td>
-          <td>2022 - 07 -23</td>
-  
-          <td> <a href="">27</a></td>
-          <td>
               
-              <a href="liste_tirage"> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right:15px ;"></i>
-              </a>
-             
-              <a href=""><i class="fa fa-pencil-square-o" aria-hidden="true" style="margin-right:15px ;"></i></a>
-  
-             <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a> 
-  
-  
-           </td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Liste 2 orange digital kalanso </td>
-          <td>2022 - 07 -23</td>
-  
-          <td> <a href="">27</a></td>
-          <td>
-              
-              <a href="liste_tirage"> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right:15px ;"></i>
-              </a>
-             
-              <a href=""><i class="fa fa-pencil-square-o" aria-hidden="true" style="margin-right:15px ;"></i></a>
-  
-             <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a> 
-  
-  
-           </td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Liste 2 orange digital kalanso </td>
-          <td>2022 - 07 -23</td>
-  
-          <td> <a href="">27</a></td>
-          <td>
-              
-              <a href="liste_tirage"> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right:15px ;"></i>
-              </a>
-             
-              <a href=""><i class="fa fa-pencil-square-o" aria-hidden="true" style="margin-right:15px ;"></i></a>
-  
-             <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a> 
-  
-  
-           </td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Liste 2 orange digital kalanso </td>
-          <td>2022 - 07 -23</td>
-  
-          <td> <a href="">27</a></td>
-          <td>
-              
-              <a href="liste_tirage"> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right:15px ;"></i>
-              </a>
-             
-              <a href=""><i class="fa fa-pencil-square-o" aria-hidden="true" style="margin-right:15px ;"></i></a>
-  
-             <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a> 
-  
-  
-           </td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Liste 2 orange digital kalanso </td>
-          <td>2022 - 07 -23</td>
-  
-          <td> <a href="">27</a></td>
-          <td>
-              
-              <a href="liste_tirage"> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right:15px ;"></i>
-              </a>
-             
-              <a href=""><i class="fa fa-pencil-square-o" aria-hidden="true" style="margin-right:15px ;"></i></a>
-  
-             <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a> 
-  
-  
-           </td>
-        </tr>
-       
         </tbody>
     </table>
     <a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i></a>

@@ -13,7 +13,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let l of listes.data; let id = index">
+        <tr *ngFor="let l of listes; let id = index">
              
           <td>{{id+1}}</td>
 
@@ -25,9 +25,7 @@
              
               <a href=""><i class="fa fa-pencil-square-o" aria-hidden="true" style="margin-right:15px ;"></i></a>
   
-             <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a> 
-  
-  
+             <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a>   
            </td>
         </tr>
         

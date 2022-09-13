@@ -1,38 +1,38 @@
 
 
-<div class="container-fluid">
+<div class="container-fluid" >
     <h2 class="text-center text-uppercase" style="margin-top: 3%;margin-bottom: 3%;">Nos statistiques</h2>
 
-        <div class="row gy-3 my-3">
+        <div class="row gy-3 my-3" *ngIf="total_listes_tire">
             <div class=" col-md-4 col-lg-4">
                 <div class="card" style="width:20rem;">
                     <h5 class="card-title text-uppercase" style="color: #002a3f;">Total liste tirée</h5>
                     <img src="assets/image/g.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                        
-                        <p class="card-text" style="font-size:25px; font-weight: 700;">26</p>
+                        <p class="card-text" style="font-size:25px; font-weight: 700;">{{total_listes_tire.data}}</p>
                         <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                     </div>
                 </div>
             </div>
-            <div class=" col-md-4 col-lg-4">
+            <div class=" col-md-4 col-lg-4" *ngIf="tirage_effectuer">
                 <div class="card" style="width:20rem;">
                     <h5 class="card-title text-uppercase"style="color: #002a3f;">Total Tirage effectué</h5>
                     <img src="assets/image/p.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                        
-                        <p class="card-text" style="font-size:25px; font-weight: 700;">70</p>
+                        <p class="card-text" style="font-size:25px; font-weight: 700;">{{tirage_effectuer.data}}</p>
                         <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                     </div>
                 </div>
             </div>
-            <div class=" col-md-4 col-lg-4">
+            <div class=" col-md-4 col-lg-4" *ngIf="postulants">
                 <div class="card" style="width:20rem;">
                     <h5 class="card-title text-uppercase" style="color: #002a3f;">Nombre postulant</h5>
                     <img src="assets/image/per.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                       
-                        <p class="card-text" style="font-size:25px; font-weight: 700;">1900</p>
+                        <p class="card-text" style="font-size:25px; font-weight: 700;">{{postulants.data}}</p>
                         <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                     </div>
                 </div>

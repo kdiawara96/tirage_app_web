@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LaListeDeTirageEtNombreTireComponent implements OnInit {
 
-  constructor() { }
+  public detaillListe: any= [];
+
+  constructor(private httpClient:HttpClient) { }
 
   ngOnInit(): void {
+
+    this.httpClient.get("http://localhost:8080/liste/detailleListe")
+    .subscribe((data)=>{
+      console.log(data)
+      this.detaillListe=data
+      
+    })
+
   }
 
 }

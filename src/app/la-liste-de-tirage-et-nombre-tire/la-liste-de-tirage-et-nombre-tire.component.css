@@ -16,5 +16,6 @@ i.fa-chevron-right{
     padding-bottom: 8%;
 }
 .entete{
-    color: #002a3f;
+    background-color: #002a3f; 
+    color: white;
 }
