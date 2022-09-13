@@ -1,5 +1,5 @@
 <div class="container">
-    <h2 class="text-center text-uppercase ">La Liste de Tirage</h2>
+    <h2 class="text-center text-uppercase ">Total Tirage</h2>
     <!-- <p>The .thead-dark class adds a black background to table headers, and the .thead-light class adds a grey background to table headers:</p> -->
     <table class="table" *ngIf="listes">
       <!-- *ngIf="listes" -->
@@ -19,7 +19,7 @@
 
           <td>{{l.libelletirage}}</td>
           <td>{{l.datetirage}}</td>
-          <a href="person"><td>{{l.nbr}}</td></a>
+          <td> <a href="person">{{l.nbr}}</a></td>
           <td> 
             <!-- <a href=""> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right:15px ;"></i></a> -->
              

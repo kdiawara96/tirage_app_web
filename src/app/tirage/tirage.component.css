@@ -47,6 +47,14 @@ label{
   align-items: center;
 }
 
+.small-div{
+  border: 1px dashed #002a3f ;
+  padding: 0px;
+  padding-left: 18%;
+  padding-right: 18%;
+  border-radius: 15px;
+}
+
 img{
   margin-left: 4%;
   margin-top: 2%;
@@ -161,8 +169,6 @@ form input[type="submit"]:hover
   height: 15px;
 
 }
-
-
 
 
 .col .form2{
