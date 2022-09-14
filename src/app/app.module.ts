@@ -16,6 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule, MatNavList } from '@angular/material/list';
 import { HttpClientModule } from '@angular/common/http';
+import { TirageFaitSurListeComponent } from './tirage-fait-sur-liste/tirage-fait-sur-liste.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     SideComponent,
     SideComponent,
+    TirageFaitSurListeComponent,
     
     
   ],

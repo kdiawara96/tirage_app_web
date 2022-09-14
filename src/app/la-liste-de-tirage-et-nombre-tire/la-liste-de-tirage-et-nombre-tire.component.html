@@ -1,7 +1,7 @@
 <div class="container">
     <h2 class="text-center text-uppercase">La Liste et le nombre de personne tiré</h2>
     <!-- <p>The .thead-dark class adds a black background to table headers, and the .thead-light class adds a grey background to table headers:</p> -->
-    <table class="table"  *ngIf="detaillListe">
+    <table class="table table-striped"  *ngIf="detaillListe">
       <thead class="thead entete" >
         <tr>
           <th>Numero</th>
@@ -12,12 +12,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let l of detaillListe; let id = index">
+        <tr *ngFor="let l of detaillListe.content; let id = index">
           <td>{{id+1}}</td>
-          <td>{{l[0]}}</td>
           <td>{{l[1]}}</td>
-          <td>{{l[2]}}</td>
-          <td> <a href=""> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right:15px ;"></i></a>
+          <td>{{l[2] | date}}</td>
+          <td>{{l[3]}}</td>
+          <td> <a [routerLink]="[url,l[0]]"> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right:15px ;"></i></a>
              
               <a href=""><i class="fa fa-pencil-square-o" aria-hidden="true" style="margin-right:15px ;"></i></a>
   
@@ -25,9 +25,71 @@
   
   
            </td>
-        </tr>
-              
+        </tr>    
         </tbody>
     </table>
-    <a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-  </div>
+     
+    <ul *ngIf="pages" class="pagination">
+      <li class="page-item" [ngClass]="i== currentPage?'active':''" *ngFor="let p of pages; let i= index">
+    <a class="page-link" (click)="onPageDeatillListe(i)">{{i}}</a>
+      </li>
+    </ul>
+
+
+    <!-- <div>
+      <a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+    </div> -->
+     </div>
+
+
+
+
+
+
+
+<!-- 
+
+
+
+     <div class="container">
+      <div class="panel panel-primary">
+        <div class="panel-heading"> 
+          La liste et leurs details
+        </div>
+           <div class="panel-body">
+
+           </div>
+
+        <div class="panel-body">
+
+          <table>
+                 <tr>
+                  <th>Numero</th>
+                  <th>Libéllés Liste</th>
+                  <th>Date</th>
+                  <th>Nombre Tirage</th>
+                  <th>Action</th>
+                 </tr>
+                 <tr *ngFor="let l of detaillListe.content; let id = index">
+                  <td>{{id+1}}</td>
+                  <td>{{l[0]}}</td>
+                  <td>{{l[1] | date}}</td>
+                  <td>{{l[2]}}</td>
+                  <td> <a href=""> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right:15px ;"></i></a>
+                     
+                      <a href=""><i class="fa fa-pencil-square-o" aria-hidden="true" style="margin-right:15px ;"></i></a>
+          
+                     <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a> 
+          
+                   </td>
+                </tr>    
+          </table>
+
+          <ul *ngIf="pages" class="nav nav-pills">
+            <li [ngClass]="i == currentPage? 'active': '' " *ngFor="let p of pages; let i= index">
+          <a href="" (click)="onPageDeatillListe(i)">{{i}}</a>
+            </li>
+          </ul>
+
+        </div>
+      </div> -->

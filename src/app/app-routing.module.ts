@@ -8,10 +8,12 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { PersonCardComponent } from './person-card/person-card.component';
 import { TirageComponent } from './tirage/tirage.component';
 import { TotalListeComponent } from './total-liste/total-liste.component';
+import { TirageFaitSurListeComponent } from './tirage-fait-sur-liste/tirage-fait-sur-liste.component';
 
 
 const routes: Routes = [
 
+  {path:"tirage_fait_sur_liste/:id", component: TirageFaitSurListeComponent},
   {path:"total_liste",component:TotalListeComponent},
   {path:"liste_tirage",component:LaListeDeTirageComponent},
   {path:"liste_tirage_nombre_tirer",component:LaListeDeTirageEtNombreTireComponent},

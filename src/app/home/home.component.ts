@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   
   public postulants: any =undefined;
 
-  public detaillListe: any = undefined;
+
   
 
   constructor(private httpClient:HttpClient) { }
@@ -43,11 +43,6 @@ export class HomeComponent implements OnInit {
       this.postulants=data
     })
 
-    this.httpClient.get("http://localhost:8080/liste/detailleListe")
-    .subscribe((data)=>{
-      console.log(data)
-      this.detaillListe=data
-    })
 
   }
 
