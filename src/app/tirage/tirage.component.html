@@ -11,11 +11,11 @@
 
 
 
-        <form class="form_1">
+        <form class="form_1" [formGroup]="formmodule" (ngSubmit)="importerliste()">
 
             <span class="dashTirage text-uppercase">Televerser un fichier</span>
 
-            <input type="file" id="file" accept="">
+            <input class="form-control" type="file" formControlName="file" id="formFileDisabled" name="file" id="file" (change)="fileChange($event)" accept="">
             <label for="file">
             <div class="small-div">
                 <div> 
@@ -33,7 +33,7 @@
 
             <div class="blocInputSubmit">
                 <div class="div_titre">
-                    <input type="text"  placeholder="Donner un titre"> 
+                    <input type="text" name="libelle" formControlName="libelle" placeholder="Donner un titre"> 
                 </div>
     
                 <div class="div_submit">
@@ -79,8 +79,10 @@
                         <div class="titre">
 
                                 <!-- <input type="select" placeholder="--Seleectionner un fichier--"> -->
-                             <select name="liste_tirage">
-                                <option value="select">--Seleectionner un fichier--</option>
+                             <select name="libelleliste" [(ngModel)]="libelleliste">
+                                <option >--Seleectionner un fichier--</option>
+                                <option  *ngFor="let l of detaillListe ">{{l[0]}}</option>
+                                <!-- <option value="liste">Liste 2 orange digital kalanso</option>
                                 <option value="liste">Liste 2 orange digital kalanso</option>
                                 <option value="liste">Liste 2 orange digital kalanso</option>
                                 <option value="liste">Liste 2 orange digital kalanso</option>
@@ -89,8 +91,7 @@
                                 <option value="liste">Liste 2 orange digital kalanso</option>
                                 <option value="liste">Liste 2 orange digital kalanso</option>
                                 <option value="liste">Liste 2 orange digital kalanso</option>
-                                <option value="liste">Liste 2 orange digital kalanso</option>
-                                <option value="liste">Liste 2 orange digital kalanso</option>
+                                <option value="liste">Liste 2 orange digital kalanso</option> -->
                                 
                             </select>
                    
@@ -99,7 +100,7 @@
                                     <!-- A modifier  -->
 
                            <div class="nombre">
-                              <input type="text"  placeholder="Nombre à tirer"> 
+                              <input type="number" name="nbr" [(ngModel)]="nbr" placeholder="Nombre à tirer"> 
                             </div>
                         
                 </div>
@@ -107,12 +108,12 @@
           
 
             <div class="libelle_tirage">
-                <input type="text"  placeholder="Libelle tirage" style="margin-top: 4%; width: 85%; "> 
+                <input type="text" name="libelletirage" [(ngModel)]="libelletirage"  placeholder="Libelle tirage" style="margin-top: 4%; width: 85%; "> 
             </div>
             
         
                 <div class="div_tire">
-                    <input type="submit"  value="Lancer">
+                    <input type="submit" (click)="postTirage()"  value="Lancer">
                 </div>
           
              
