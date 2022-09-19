@@ -13,13 +13,13 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let l of listes; let id = index">
+        <tr *ngFor="let l of listes.content; let id = index">
              
           <td>{{id+1}}</td>
 
           <td>{{l.libelletirage}}</td>
           <td>{{l.datetirage|date}}</td>
-          <td><a [routerLink]="[url,l[0]]">{{l.nbr}}</a></td>
+          <td><a [routerLink]="[url,l.id]">{{ l.nbr }}</a></td>
           <td> 
             <!-- <a href=""> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right:15px ;"></i></a> -->
              
@@ -30,11 +30,11 @@
         </tr>       
         </tbody>
     </table>
-<!--     
+     
     <ul *ngIf="pages" class="pagination">
       <li class="page-item dark" [ngClass]="i== currentPage?'active':''" *ngFor="let p of pages; let i= index">
     <a class="page-link" (click)="onPageDeatillListe(i)">{{i}}</a>
       </li>
-    </ul> -->
+    </ul> 
 
   </div>

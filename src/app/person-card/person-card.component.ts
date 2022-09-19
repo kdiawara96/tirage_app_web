@@ -26,7 +26,7 @@ export class PersonCardComponent implements OnInit {
     this.postulants.PostulantTirerParListe(this.currentPage,this.size, this.id)
     .subscribe(data=>{
       console.log(data);
-      this.totalPages=data["totalPages"];
+      this.totalPages = data["totalPages"];
       this.pages=new Array<number>(this.totalPages);
       this.postulantsDetail=data
       console.log(data)

@@ -14,4 +14,10 @@ export class PersonInfoService {
     return this.httpClient.get(`${this.host}/postulantTirer/postulantsTirer/${id}?page=${page}&size=${size}`);
   }
 
+
+  
+  public PostulantsTirer(page:number, size:number, id: number){
+    return this.httpClient.get(`${this.host}/postulantTirer/postulantsTirer/${id}?page=${page}&size=${size}`);
+  }
+  
 }

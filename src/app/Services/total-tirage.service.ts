@@ -11,8 +11,6 @@ export class TotalTirageService {
   constructor(private httpClient: HttpClient) { }
   
   
-  
-  
   public affichage_detail_liste(page:number, size:number):Observable<any>{
     return this.httpClient.get(`${this.host}/tirages/AfficherTirage?page=${page}&size=${size}`);
   }

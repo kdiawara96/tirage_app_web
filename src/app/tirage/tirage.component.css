@@ -208,10 +208,10 @@ form input[type="submit"]:hover
   font-size: 10px;
 }
 
-::placeholder{
+/* ::placeholder{
   text-align: center;
   color: #002a3f;
-}
+} */
 
 .titre{
   display: flex;
