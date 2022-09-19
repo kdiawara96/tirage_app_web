@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LaListeDeTirageEtNombreTireComponent } from './la-liste-de-tirage-et-nombre-tire/la-liste-de-tirage-et-nombre-tire.component';
+
 import { LaListeDeTirageComponent } from './Total_tirage/la-liste-de-tirage.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+
 import { PersonCardComponent } from './person-card/person-card.component';
 import { TirageComponent } from './tirage/tirage.component';
 import { TotalListeComponent } from './total-liste/total-liste.component';
@@ -12,7 +12,7 @@ import { TirageFaitSurListeComponent } from './tirage-fait-sur-liste/tirage-fait
 
 
 const routes: Routes = [
-
+  {path:"liste_postulants_tirage/:id", component: PersonCardComponent},
   {path:"tirage_fait_sur_liste/:id", component: TirageFaitSurListeComponent},
   {path:"total_liste",component:TotalListeComponent},
   {path:"liste_tirage",component:LaListeDeTirageComponent},

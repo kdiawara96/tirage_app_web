@@ -1,134 +1,119 @@
 
-
 <div class="container">
 
-<div class="row">
-
-
-    <div class=" col-sm-12 col-md-12 col-lg-6 div1" >
-
-
-
-
-
-        <form class="form_1">
-
-            <span class="dashTirage text-uppercase">Televerser un fichier</span>
-
-            <input type="file" id="file" accept="">
-
-            <label for="file">
-
-            <div class="small-div">
-
-                <div> 
-                <img src="../../assets/image/photo.png" height=90%, width=90%> 
-                    <!-- <i class="fa fa-file-excel-o" aria-hidden="true"></i>
-                    choose a file -->
-                    <div class="divSelect">
-                    <p  class="selectionner">Selectionner le fichier à Importer</p>
-                    <p class="ou"> Ou gliser deposer</p>
-                    </div>
-                </div>  
-                
-            </div>
-
-            </label>
+    <div class="row">
     
-
-            <div class="blocInputSubmit">
-                <div class="div_titre">
-                    <input type="text"  placeholder="Donner un titre"> 
-                </div>
     
-                <div class="div_submit">
-                    <input type="submit"  value="Inserer">
-                </div>
+        <div class=" col-sm-12 col-md-12 col-lg-6 div1" >
     
-            </div>
-            
-           
-
-            <div class="success">
-                <i class="fa fa-check-circle" style="font-size: 35px; color: green;" aria-hidden="true"></i>
-                <p>Les données sont bien inseré !</p>
-             </div>
-
-            <div class="erreur">
-                    <i class="fa fa-exclamation-circle" style="font-size: 35px; color: Red;" aria-hidden="true"></i>
-                    <p>Les données ne sont inseré !</p>    
-            </div>
-
-     </form>
-
-    </div>
     
-
-
-
-    <div class="col-sm-12 col-md-12 col-lg-6" id="div2">
-    <form class="form_2">
-            <span class="faire_tirage text-uppercase" style="margin-right: 15%; ">Faire un tirage</span>
-
-           
-                <div>
-                    <img src="../../assets/image/tirage.png" width=80% height=4% alt="" style="margin-left: 10%;margin-bottom: 5%;margin-top: 2%;">
+    
+    
+    
+            <form class="form_1 dropzone" [formGroup]="formmodule" (ngSubmit)="importerliste()">
+    
+                <span class="dashTirage text-uppercase">Televerser un fichier</span>
+    
+                <input class="form-control" type="file" formControlName="file" id="formFileDisabled" name="file" id="file" (change)="fileChange($event)" accept="">
+                <label for="file">
+                <div class="small-div">
+                    <div> 
+                    <img src="../../assets/image/photo.png" height=90%, width=90%> 
+                        <!-- <i class="fa fa-file-excel-o" aria-hidden="true"></i>
+                        choose a file -->
+                        <div class="divSelect">
+                        <p  class="selectionner">Selectionner le fichier à Importer</p>
+                        <p class="ou"> Ou gliser deposer</p>
+                        </div>
+                    </div>  
                 </div>
-           
-              
-
-                    <div class="champ">
-
-
-                        <!--  a modifier select box-->
-                        <div class="titre">
-
-                                <!-- <input type="select" placeholder="--Seleectionner un fichier--"> -->
-                             <select name="liste_tirage">
-                                <option value="select">--Seleectionner un fichier--</option>
-                                <option value="liste">Liste 2 orange digital kalanso</option>
-                                <option value="liste">Liste 2 orange digital kalanso</option>
-                                <option value="liste">Liste 2 orange digital kalanso</option>
-                                <option value="liste">Liste 2 orange digital kalanso</option>
-                                <option value="liste">Liste 2 orange digital kalanso</option>
-                                <option value="liste">Liste 2 orange digital kalanso</option>
-                                <option value="liste">Liste 2 orange digital kalanso</option>
-                                <option value="liste">Liste 2 orange digital kalanso</option>
-                                <option value="liste">Liste 2 orange digital kalanso</option>
-                                <option value="liste">Liste 2 orange digital kalanso</option>
-                                
-                            </select>
-                   
-                         </div>
-
-                                    <!-- A modifier  -->
-
-                           <div class="nombre">
-                              <input type="text"  placeholder="Nombre à tirer"> 
-                            </div>
-                        
-                </div>
-                
-          
-
-            <div class="libelle_tirage">
-                <input type="text"  placeholder="Libelle tirage" style="margin-top: 4%; width: 85%; "> 
-            </div>
-            
+                </label>
         
-                <div class="div_tire">
-                    <input type="submit"  value="Lancer">
+    
+                <div class="blocInputSubmit">
+                    <div class="div_titre">
+                        <input type="text" name="libelle" formControlName="libelle" placeholder="Donner un titre"> 
+                    </div>
+        
+                    <div class="div_submit">
+                        <input type="submit"  value="Inserer">
+                    </div>
+        
                 </div>
-          
-             
-            </form>
-
+                
+               
+    
+                <div class="success">
+                    <i class="fa fa-check-circle" style="font-size: 35px; color: green;" aria-hidden="true"></i>
+                    <p>Les données sont bien inseré !</p>
+                 </div>
+    
+                <div class="erreur">
+                        <i class="fa fa-exclamation-circle" style="font-size: 35px; color: Red;" aria-hidden="true"></i>
+                        <p>Les données ne sont inseré !</p>    
+                </div>
+    
+         </form>
+    
+        </div>
+        
+    
+    
+    
+        <div class="col-sm-12 col-md-12 col-lg-6" id="div2">
+        <form class="form_2">
+                <span class="faire_tirage text-uppercase" style="margin-right: 15%; ">Faire un tirage</span>
+    
+               
+                    <div>
+                        <img src="../../assets/image/tirage.png" width=80% height=4% alt="" style="margin-left: 10%;margin-bottom: 5%;margin-top: 2%;">
+                    </div>
+               
+                  
+    
+                        <div class="champ">
+    
+    
+                            <!--  a modifier select box-->
+                            <div class="titre">
+    
+                                    <!-- <input type="select" placeholder="--Seleectionner un fichier--"> -->
+                                 <select name="libelleliste" [(ngModel)]="libelleliste">
+                                    <option >--Seleectionner un fichier--</option>
+                                    <option  *ngFor="let l of detaillListe ">{{l}}</option>
+                                 </select>
+                       
+                             </div>
+    
+                                        <!-- A modifier  -->
+    
+                               <div class="nombre">
+                                  <input type="number" name="nbr" [(ngModel)]="nbr" placeholder="Nombre à tirer"> 
+                                </div>
+                            
+                    </div>
+                    
+              
+    
+                <div class="libelle_tirage">
+                    <input type="text" name="libelletirage" [(ngModel)]="libelletirage"  placeholder="Libelle tirage" style="margin-top: 4%; width: 85%; "> 
+                </div>
+                
+            
+                    <div class="div_tire">
+                        <input type="submit" (click)="postTirage()"  value="Lancer">
+                    </div>
+              
+                 
+                </form>                 
+    
+        </div>
+    
+    
+    </div>
+    
+    
     </div>
 
 
-</div>
-
-
-</div>
-
-
+  

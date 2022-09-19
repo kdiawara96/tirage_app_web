@@ -15,6 +15,7 @@ export class LaListeDeTirageEtNombreTireComponent implements OnInit {
   public totalPages:number;
   public url="/tirage_fait_sur_liste";
   public pages: Array<number>
+  public nbr:any;
 
   constructor(private detailService:LIsteTirageNombreTireService) { }
 
@@ -32,6 +33,12 @@ export class LaListeDeTirageEtNombreTireComponent implements OnInit {
     console.log(err);
   });
       
+  // this.detailService.getNombre()
+  // .subscribe((data)=>{
+  //   console.log(data)
+  //   this.nbr=data
+
+  // })
 
   }
 
@@ -39,5 +46,8 @@ export class LaListeDeTirageEtNombreTireComponent implements OnInit {
     this.currentPage=i;
     this.ngOnInit();
   }
+
+
+
 
 }

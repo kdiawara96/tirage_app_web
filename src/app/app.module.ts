@@ -17,6 +17,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule, MatNavList } from '@angular/material/list';
 import { HttpClientModule } from '@angular/common/http';
 import { TirageFaitSurListeComponent } from './tirage-fait-sur-liste/tirage-fait-sur-liste.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { PersonCardComponent } from './person-card/person-card.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,8 @@ import { TirageFaitSurListeComponent } from './tirage-fait-sur-liste/tirage-fait
     SideComponent,
     SideComponent,
     TirageFaitSurListeComponent,
+    PersonCardComponent
+    
     
     
   ],
@@ -41,7 +46,9 @@ import { TirageFaitSurListeComponent } from './tirage-fait-sur-liste/tirage-fait
     MatIconModule,
     MatToolbarModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     
   ],
   providers: [],

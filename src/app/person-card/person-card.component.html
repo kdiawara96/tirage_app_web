@@ -1,148 +1,25 @@
 
-<div class="container">
+<div class="container " *ngIf="postulantsDetail">
     <div class="row gy-3 my-3">
-
       
-        <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let l of postulantsDetail.content; let id = index">
             
-             <div class="card">
+             <div class="card"  >
                 <img src="assets/image/profile.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">DIAWARA Karim</h5>
-                  <p class="card-text">Liste Kalanso 2 -- Tirage 2</p>
+                  <h5 class="card-title">{{l[0]}} {{l[1]}}</h5>
+                  <p class="card-text">{{l[2]}} -- {{l[3]}}</p>
                   <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                  
                 </div>
              </div>
 
         </div>
-
-
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            
-            <div class="card">
-               <img src="assets/image/profile.png" class="card-img-top" alt="...">
-               <div class="card-body">
-                 <h5 class="card-title">Youssouf Djire</h5>
-                 <p class="card-text">Liste Kalanso 2 -- Tirage 2</p>
-                 <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-               </div>
-            </div>
-
-       </div>
-
-
-       <div class="col-sm-6 col-md-4 col-lg-3">   
-        <div class="card">
-           <img src="assets/image/profile.png" class="card-img-top" alt="...">
-           <div class="card-body">
-             <h5 class="card-title">DIAWARA Karim</h5>
-             <p class="card-text">Liste Kalanso 2 -- Tirage 2</p>
-             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-           </div>
-        </div>
-
-   </div>
-
-
-
-   <div class="col-sm-6 col-md-4 col-lg-3">
-    <div class="card">
-       <img src="assets/image/profile.png" class="card-img-top" alt="...">
-       <div class="card-body">
-         <h5 class="card-title">Youssouf Djire</h5>
-         <p class="card-text">Liste Kalanso 2 -- Tirage 2</p>
-         <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-       </div>
-    </div>
-
-</div>
-
-<div class="col-sm-6 col-md-4 col-lg-3">
-            
-    <div class="card">
-       <img src="assets/image/profile.png" class="card-img-top" alt="...">
-       <div class="card-body">
-         <h5 class="card-title">DIAWARA Karim</h5>
-         <p class="card-text">Liste Kalanso 2 -- Tirage 2</p>
-         <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-       </div>
-    </div>
-
-</div>
-
-
-
-
-<div class="col-sm-6 col-md-4 col-lg-3">
-            
-    <div class="card">
-       <img src="assets/image/profile.png" class="card-img-top" alt="...">
-       <div class="card-body">
-         <h5 class="card-title">Youssouf Djire</h5>
-         <p class="card-text">Liste Kalanso 2 -- Tirage 2</p>
-         <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-       </div>
-    </div>
-
-</div>
-
-
-
-
-<div class="col-sm-6 col-md-4 col-lg-3">
-            
-    <div class="card">
-       <img src="assets/image/profile.png" class="card-img-top" alt="...">
-       <div class="card-body">
-         <h5 class="card-title">DIAWARA Karim</h5>
-         <p class="card-text">Liste Kalanso 2 -- Tirage 2</p>
-         <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-       </div>
-    </div>
-</div>
-
-
-
-<div class="col-sm-6 col-md-4 col-lg-3">
-            
-    <div class="card">
-       <img src="assets/image/profile.png" class="card-img-top" alt="...">
-       <div class="card-body">
-         <h5 class="card-title">Youssouf Djire</h5>
-         <p class="card-text">Liste Kalanso 2 -- Tirage 2</p>
-         <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-       </div>
-    </div>
-</div>
-
-
-<div class="col-sm-6 col-md-4 col-lg-3">
-            
-    <div class="card">
-       <img src="assets/image/profile.png" class="card-img-top" alt="...">
-       <div class="card-body">
-         <h5 class="card-title">DIAWARA Karim</h5>
-         <p class="card-text">Liste Kalanso 2 -- Tirage 2</p>
-         <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-       </div>
-    </div>
-</div>
-
-<div class="col-sm-6 col-md-4 col-lg-3">
-            
-  <div class="card">
-     <img src="assets/image/profile.png" class="card-img-top" alt="...">
-     <div class="card-body">
-       <h5 class="card-title">Youssouf Djire</h5>
-       <p class="card-text">Liste Kalanso 2 -- Tirage 2</p>
-       <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-     </div>
-  </div>
-</div>
-
-
-
-
+        <ul *ngIf="pages" class="pagination">
+          <li class="page-item" [ngClass]="i== currentPage?'active':''" *ngFor="let p of pages; let i= index">
+        <a class="page-link" (click)="onPageDeatillListe(i)">{{i}}</a>
+          </li>
+        </ul>
 
     </div>
 

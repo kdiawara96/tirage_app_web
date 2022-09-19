@@ -3,7 +3,7 @@
 <div class="container">
   <h2 class="text-center">Total Liste</h2>
   <!-- <p>The .thead-dark class adds a black background to table headers, and the .thead-light class adds a grey background to table headers:</p> -->
-  <table class="table">
+  <table class="table table-striped" *ngIf="listes">
     <thead class="thead entete">
       <tr>
         <th>Numéro</th>
@@ -14,12 +14,18 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>Liste 2 orange digital kalanso </td>
-        <td>2022 - 07 -23</td>
-        <a href=""><td>27</td></a>
-        <td> <a href="liste_tirage"> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right:15px ;"></i></a>
+
+
+      
+      <tr *ngFor="let l of listes; let id = index">
+        <td>{{id+1}}</td>
+        <td>{{l[1]}} </td>
+        <td>{{l[2]|date}}</td>
+        <td><a href="">{{l[3]}}</a></td>
+
+        <td> 
+          
+          <a href="liste_tirage"> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right:15px ;"></i></a>
            
             <a href=""><i class="fa fa-pencil-square-o" aria-hidden="true" style="margin-right:15px ;"></i></a>
 
@@ -28,149 +34,16 @@
 
          </td>
       </tr>
-      <tr>
-        <td>1</td>
-        <td>Liste 2 orange digital kalanso </td>
-        <td>2022 - 07 -23</td>
-        <td><a href="">27</a></td>
-        <td>
-            
-            <a href="liste_tirage"> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right:15px ;"></i>
-            </a>
-           
-            <a href=""><i class="fa fa-pencil-square-o" aria-hidden="true" style="margin-right:15px ;"></i></a>
-
-           <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a> 
 
 
-         </td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Liste 2 orange digital kalanso </td>
-        <td>2022 - 07 -23</td>
 
-        <td> <a href="">27</a></td>
-        <td>
-            
-            <a href="liste_tirage"> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right:15px ;"></i>
-            </a>
-           
-            <a href=""><i class="fa fa-pencil-square-o" aria-hidden="true" style="margin-right:15px ;"></i></a>
-
-           <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a> 
-
-
-         </td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Liste 2 orange digital kalanso </td>
-        <td>2022 - 07 -23</td>
-
-        <td> <a href="">27</a></td>
-        <td>
-            
-            <a href="liste_tirage"> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right:15px ;"></i>
-            </a>
-           
-            <a href=""><i class="fa fa-pencil-square-o" aria-hidden="true" style="margin-right:15px ;"></i></a>
-
-           <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a> 
-
-
-         </td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Liste 2 orange digital kalanso </td>
-        <td>2022 - 07 -23</td>
-
-        <td> <a href="">27</a></td>
-        <td>
-            
-            <a href="liste_tirage"> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right:15px ;"></i>
-            </a>
-           
-            <a href=""><i class="fa fa-pencil-square-o" aria-hidden="true" style="margin-right:15px ;"></i></a>
-
-           <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a> 
-
-
-         </td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Liste 2 orange digital kalanso </td>
-        <td>2022 - 07 -23</td>
-
-        <td> <a href="">27</a></td>
-        <td>
-            
-            <a href="liste_tirage"> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right:15px ;"></i>
-            </a>
-           
-            <a href=""><i class="fa fa-pencil-square-o" aria-hidden="true" style="margin-right:15px ;"></i></a>
-
-           <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a> 
-
-
-         </td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Liste 2 orange digital kalanso </td>
-        <td>2022 - 07 -23</td>
-
-        <td> <a href="">27</a></td>
-        <td>
-            
-            <a href="liste_tirage"> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right:15px ;"></i>
-            </a>
-           
-            <a href=""><i class="fa fa-pencil-square-o" aria-hidden="true" style="margin-right:15px ;"></i></a>
-
-           <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a> 
-
-
-         </td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Liste 2 orange digital kalanso </td>
-        <td>2022 - 07 -23</td>
-
-        <td> <a href="">27</a></td>
-        <td>
-            
-            <a href="liste_tirage"> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right:15px ;"></i>
-            </a>
-           
-            <a href=""><i class="fa fa-pencil-square-o" aria-hidden="true" style="margin-right:15px ;"></i></a>
-
-           <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a> 
-
-
-         </td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Liste 2 orange digital kalanso </td>
-        <td>2022 - 07 -23</td>
-
-        <td> <a href="">27</a></td>
-       <td>
-            
-            <a href="liste_tirage"> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right:15px ;"></i>
-            </a>
-           
-            <a href=""><i class="fa fa-pencil-square-o" aria-hidden="true" style="margin-right:15px ;"></i></a>
-
-           <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a> 
-
-
-         </td>
-      </tr>
-      </tbody>
+     </tbody>
   </table>
+  
+  <ul *ngIf="pages" class="pagination">
+    <li class="page-item dark" [ngClass]="i== currentPage?'active':''" *ngFor="let p of pages; let i= index">
+  <a class="page-link" (click)="onPageDeatillListe(i)">{{i}}</a>
+    </li>
+  </ul>
+
 </div>

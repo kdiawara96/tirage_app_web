@@ -17,6 +17,9 @@ export class TirageFaitSurListeComponent implements OnInit {
   public totalPages:number;
   public pages: Array<number>
   public id:number;
+  
+  public url="/liste_postulants_tirage";
+//  public titre: string;
   // public listes: any =undefined;
  
 
@@ -26,7 +29,7 @@ export class TirageFaitSurListeComponent implements OnInit {
   ngOnInit(): void {
 
      this.id =this.route.snapshot.params['id']
-
+ 
     this.liste_tirage_sur_liste.getTiragedetail_par_Liste(this.currentPage,this.size, this.id)
     .subscribe(data=>{
       console.log(data);
@@ -34,6 +37,7 @@ export class TirageFaitSurListeComponent implements OnInit {
       this.totalPages=data["totalPages"];
       this.pages=new Array<number>(this.totalPages);
       this.detaillListe=data
+      //this.titre=data["content"]
 
     },err=>{
       console.log(err);
@@ -41,10 +45,11 @@ export class TirageFaitSurListeComponent implements OnInit {
 
   }
 
+
+  
   onPageDeatillListe(i){
     this.currentPage=i;
     this.ngOnInit();
   }
-
 
 }

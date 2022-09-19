@@ -1,7 +1,7 @@
 <div class="container">
-    <h2 class="text-center text-uppercase ">Total Tirage faite sur la liste {{detaillListe.libelletirage}}</h2>
+    <h2 class="text-center text-uppercase ">Total Tirage faite sur la liste</h2>
     <!-- <p>The .thead-dark class adds a black background to table headers, and the .thead-light class adds a grey background to table headers:</p> -->
-    <table class="table" *ngIf="detaillListe">
+    <table class="table table-striped" *ngIf="detaillListe">
       <!-- *ngIf="listes" -->
       <thead class="thead entete">
         <tr>
@@ -17,15 +17,15 @@
              
           <td>{{id+1}}</td>
 
-          <td>{{l[1]}}</td>
-          <td>{{l[0]}}</td>
-          <td> <a href="person">{{l[2]}}</a></td>
+          <td>{{l[2]}}</td>
+          <td>{{l[1] | date}}</td>
+          <td> <a  [routerLink]="[url,l[0]]">{{l[3]}}</a></td>
           <td> 
             <!-- <a href=""> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right:15px ;"></i></a> -->
              
               <a href=""><i class="fa fa-pencil-square-o" aria-hidden="true" style="margin-right:15px ;"></i></a>
   
-             <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a>   
+             <a href=""><i class="fa fa-trash" aria-hidden="true" style="color: red ;"></i></a>   
            </td>
         </tr>
         
