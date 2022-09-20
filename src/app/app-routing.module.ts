@@ -9,6 +9,7 @@ import { PersonCardComponent } from './person-card/person-card.component';
 import { TirageComponent } from './tirage/tirage.component';
 import { TotalListeComponent } from './total-liste/total-liste.component';
 import { TirageFaitSurListeComponent } from './tirage-fait-sur-liste/tirage-fait-sur-liste.component';
+import { PersonneTirerComponent } from './personne-tirer/personne-tirer.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path:"tirage",component:TirageComponent},
   {path:"home", component: HomeComponent},
   {path:"person", component: PersonCardComponent},
+  {path:"personneTire/:libelle", component: PersonneTirerComponent},
   {path:"", component: HomeComponent}
 ];
 

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Fichier } from '../fichier';
+import { PersonInfoService } from '../Services/person-info.service';
 import { Tirage } from '../tirage';
 import { TirageService } from '../tirage.service';
 
@@ -16,9 +17,11 @@ export class TirageComponent implements OnInit {
   formmodule!:FormGroup;
       file:any;
       fichier! : Fichier;
+      value:any;
+      id_tirage:number;
 
   private tirages: Tirage[];
-  constructor(private tirageService: TirageService,private httpClient: HttpClient,private formB:FormBuilder) { }
+  constructor(private tirageService: TirageService,private httpClient: HttpClient,private formB:FormBuilder, private personTirer: PersonInfoService) { }
 
 
   tirageObjet: Tirage = {
@@ -29,6 +32,8 @@ export class TirageComponent implements OnInit {
     liste_id: 0
   }
 
+  url = "/personneTire"
+  
   id: number;
     datetirage: string;
     libelletirage: string;
@@ -79,7 +84,9 @@ export class TirageComponent implements OnInit {
      this.tirageObjet.nbr = this.nbr;
      console.log(this.tirageObjet)
      this.tirageService.postTirages(this.tirageObjet,this.libelleliste)
-     .subscribe()
+     .subscribe( )
+    //  this.tirageService.getPostulants(this.libelleliste);
+    
   }
   // postTirage(){
   //   this.tirageObjet.libelletirage = this.libelletirage;

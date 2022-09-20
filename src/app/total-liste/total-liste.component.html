@@ -17,11 +17,11 @@
 
 
       
-      <tr *ngFor="let l of listes; let id = index">
+      <tr *ngFor="let l of listes.content; let id = index">
         <td>{{id+1}}</td>
         <td>{{l[1]}} </td>
         <td>{{l[2]|date}}</td>
-        <td><a href="">{{l[3]}}</a></td>
+        <td><a [routerLink]="[url,l[0]]">{{l[3]}}</a></td>
 
         <td> 
           

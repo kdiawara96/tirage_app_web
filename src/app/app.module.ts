@@ -20,6 +20,7 @@ import { TirageFaitSurListeComponent } from './tirage-fait-sur-liste/tirage-fait
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { PersonCardComponent } from './person-card/person-card.component';
+import { PersonneTirerComponent } from './personne-tirer/personne-tirer.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { PersonCardComponent } from './person-card/person-card.component';
     SideComponent,
     SideComponent,
     TirageFaitSurListeComponent,
-    PersonCardComponent
+    PersonCardComponent,
+    PersonneTirerComponent
     
     
     

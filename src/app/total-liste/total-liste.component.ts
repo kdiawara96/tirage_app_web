@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { TotalListeService } from '../Services/total-liste.service';
 
 @Component({
@@ -18,15 +19,20 @@ export class TotalListeComponent implements OnInit {
   public totalPages:number;
   // public url="/tirage_fait_sur_liste";
   public pages: Array<number>
+  public id:number;
 
+  public url="/liste_postulants_tirage";
 
 
   constructor(
-    private afficherListe:TotalListeService
+    private afficherListe:TotalListeService,
+    private route: ActivatedRoute
     ) {}
 
   ngOnInit(): void {
    
+    this.id =this.route.snapshot.params['id']
+ 
 this.getListe();
 
   }
@@ -35,8 +41,11 @@ this.getListe();
   public getListe(){
     this.afficherListe.affichage_detail_liste(this.currentPage,this.size)
     .subscribe((data=>{
-     console.log(data),
+     
+     this.totalPages=data["totalPages"];
+     this.pages=new Array<number>(this.totalPages)
      this.listes=data
+     
       
     }))
 

@@ -19,7 +19,7 @@ export class LaListeDeTirageComponent implements OnInit {
   
   public url="/liste_postulants_tirage";
 
-  constructor(private totalListe:TotalTirageService, private httpClient:HttpClient,private route: ActivatedRoute) {}
+  constructor(private totalListe:TotalTirageService,private route: ActivatedRoute) {}
 
   ngOnInit(): void {
 
@@ -32,7 +32,7 @@ export class LaListeDeTirageComponent implements OnInit {
 
       
       this.totalPages=data["totalPages"];
-      this.pages=new Array<number>(this.totalPages)
+      this.pages=new Array<number>(this.totalPages);
       this.listes=data
       console.log(this.listes)
     
